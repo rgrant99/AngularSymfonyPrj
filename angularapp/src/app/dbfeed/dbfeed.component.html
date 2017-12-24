@@ -1,0 +1,46 @@
+
+<hr/>
+
+<h3>DB Data View</h3>
+
+<table id="dbdata" class="display" width="100%">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>fruit</th>
+			<th>latitude</th>
+			<th>name</th>
+			<th>email</th>
+			<th>color</th>
+			<th>address</th>
+			<th>&nbsp;</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<th>ID</th>
+			<th>fruit</th>
+			<th>latitude</th>
+			<th>name</th>
+			<th>email</th>
+			<th>color</th>
+			<th>address</th>
+			<th>&nbsp;</th>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr *ngFor="let data of DbArray">
+			<td>{{data.importid}}</td>
+			<td>{{data.fruit}}</td>
+			<td>{{data.latitude}}</td>
+			<td>{{data.name}}</td>
+			<td>{{data.email}}</td>
+			<td>{{data.color}}</td>
+			<td>{{data.address}}</td>
+
+			<td>
+				<button (click)="removeDbData(data)">X</button>				
+			</td>
+		</tr>
+	</tbody>
+</table>

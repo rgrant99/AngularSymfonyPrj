@@ -1,0 +1,41 @@
+<table id="apidata" class="display" width="100%">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>fruit</th>
+			<th>latitude</th>
+			<th>name</th>
+			<th>email</th>
+			<th>color</th>
+			<th>address</th>
+			<th>&nbsp;</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<th>ID</th>
+			<th>fruit</th>
+			<th>latitude</th>
+			<th>name</th>
+			<th>email</th>
+			<th>color</th>
+			<th>address</th>
+			<th>&nbsp;</th>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr *ngFor="let data of DataArray">
+			<td>{{data.index}}</td>
+			<td>{{data.favoriteFruit}}</td>
+			<td>{{data.latitude}}</td>
+			<td>{{data.company}}</td>
+			<td>{{data.email}}</td>
+			<td>{{data.eyeColor}}</td>
+			<td>{{data.address}}</td>
+
+			<td>
+				<button (click)="saveData(data)">Save</button>				
+			</td>
+		</tr>
+	</tbody>
+</table>
